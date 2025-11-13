@@ -1,5 +1,7 @@
+// config.ts
+
 export const BACKEND_URL =
-  import.meta.env.VITE_BACKEND_URL?.replace(/\/$/, '') || 'http://localhost:8000';
+  import.meta.env.VITE_BACKEND_URL?.replace(/\/$/, "") || "http://localhost:8000";
 
 export const API_ROUTES = {
   HEALTH: `${BACKEND_URL}/health`,
@@ -11,4 +13,3 @@ export const API_ROUTES = {
   downloadBook: (projectId: string, format: string) =>
     `${BACKEND_URL}/books/${projectId}/download/${format}`,
 };
-
